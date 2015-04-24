@@ -1,0 +1,38 @@
+canvas {
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid rgba(100,100,100,0.5);
+}
+
+div.container {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    clear:both;
+}
+
+.button {
+    padding:5px;
+    color:black;
+    border: 1px solid rgba(100,100,100,0.5);
+    background-color: rgba(150,150,150,0.3);
+    margin: 10px;
+    display: inline-box;
+}
+
+.button:hover{
+    color:black;
+    background-color: rgba(210,200,0,0.9);
+}
+
+.button:active{
+    background-color: rgb(220,160,0)
+}
