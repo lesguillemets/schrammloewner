@@ -29,7 +29,7 @@ renderRW canv seed n = let
     in do
         render canv . translate (r,r) . color backColor .  stroke . path $ walk
         renderOnTop canv . translate (r,r) .
-             color mainColor .  stroke . path $ eraseLoop walk
+             color mainColor .  stroke . path $ eraseWhole walk
 
 mainColor :: Color
 mainColor = RGB 0 0 250
@@ -42,3 +42,8 @@ eraseLoop [] = []
 eraseLoop (x:xs) = case dropWhile (/=x) xs of
                        [] -> x: eraseLoop xs
                        (h:rest) -> h : eraseLoop rest
+
+eraseWhole :: (Eq a) => [a] -> [a]
+eraseWhole xs = let xs' = eraseLoop xs in
+    if length xs == length xs' then xs
+                               else eraseWhole xs'
