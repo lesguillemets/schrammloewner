@@ -1,3 +1,5 @@
+all: ./build/LoopErased.js ./build/RandomWalk.js
+
 ./build/LoopErased.js: ./src/LoopErased.hs
 	hastec -Wall -fno-warn-unused-do-bind -O2 ./src/LoopErased.hs -isrc -o ./build/LoopErased.js
 
